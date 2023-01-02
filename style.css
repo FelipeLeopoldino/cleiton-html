@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+
+  line-height: 24px;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url('./image/TEXTURA.png');
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #ffd200;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #000;
+  z-index: 1100;
+  margin: 0 auto;
+}
+.navMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+.navMenu li {
+  list-style: none;
+  font-size: 2rem;
+  color: #252525;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.navMenu li:hover {
+  color: #fff;
+}
+
+.botaoTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #ffd200;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  color: #252525;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  scale: 0.9;
+}
+
+.botaoTop:hover {
+  scale: 1;
+  color: #000;
+}
+a {
+  text-decoration: none;
+  color: #252525;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .navbar {
+    visibility: hidden;
+  }
+}
+
+/* MAIN */
+
+.topSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 5rem;
+  margin-bottom: -12rem;
+}
+
+.topLeft {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.titleTop {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+}
+
+.titleTop h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd200;
+  padding: 0.5rem 1rem;
+  color: #000;
+  font-size: 3rem;
+  margin: 2rem 0 0 0;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+
+  letter-spacing: -2px;
+}
+.titleTop h3 {
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  background-color: #ffd200;
+  font-family: 'Montserrat';
+}
+
+.topAbout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32rem;
+  gap: 1rem;
+}
+
+.topAbout p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Montserrat';
+}
+.topImage img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 0px 10rem #ffd200);
+  width: 35rem;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 3rem;
+  }
+  .topAbout p {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .topSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .topImage img {
+    width: 25rem;
+    filter: drop-shadow(0px 0px 20px #ffd200);
+  }
+  .titleTop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 7.2rem;
+  }
+  .titleTop h1 {
+    font-size: 1.5rem;
+  }
+  .titleTop h3 {
+    font-size: 1rem;
+  }
+  .topAbout {
+    display: flex;
+    justify-content: center;
+  }
+  .topAbout p {
+    width: 20rem;
+  }
+}
+@media (max-width: 390px) {
+  .topSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .titleTop h1 {
+    font-size: 2rem;
+  }
+  .titleTop h3 {
+    font-size: 1.2rem;
+  }
+  .topAbout {
+    width: 32rem;
+  }
+  .topAbout p {
+    font-size: 1.2rem;
+  }
+}
+
+/* AUTORIDADE */
+
+.autoridade {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 40rem;
+  background: url('../image/faixaAmarela.png') center;
+  z-index: 20;
+}
+
+.clientes,
+.horas,
+.anos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+.clientes h2,
+.horas h2,
+.anos h2 {
+  font-size: 5rem;
+  margin: 0;
+  font-family: 'Bebas Neue';
+  color: #000;
+  font-weight: 200;
+}
+.clientes h4,
+.horas h4,
+.anos h4 {
+  font-size: 1.8rem;
+  font-family: 'Montserrat';
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .autoridade {
+    display: flex;
+    justify-content: space-around;
+  }
+  .clientes h2,
+  .horas h2,
+  .anos h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 50px;
+  }
+  .clientes h4,
+  .horas h4,
+  .anos h4 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+@media (max-width: 425px) {
+  .autoridade {
+    display: flex;
+  }
+  .clientes h2,
+  .horas h2,
+  .anos h2 {
+    font-size: 3.5rem;
+    margin-top: -2rem;
+  }
+  .clientes h4,
+  .horas h4,
+  .anos h4 {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 390px) {
+  .clientes h2,
+  .horas h2,
+  .anos h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  .clientes h4,
+  .horas h4,
+  .anos h4 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+/* MENTAL COACH */
+
+.mentalCoach {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  margin-top: -8rem;
+}
+.titleMental {
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.titleMental h2,
+.subtitleMental h3 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffd200;
+  color: #000;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.titleMental p,
+.subtitleMental p {
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+  width: 30rem;
+  font-family: 'Montserrat';
+}
+
+.imageMental img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 1px 150px #ffd200);
+  width: 42rem;
+}
+
+@media (max-width: 768px) {
+  .mentalCoach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .titleMental h2,
+  .subtitleMental h3 {
+    margin-top: 5rem;
+  }
+  .titleMental p,
+  .subtitleMental p {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .mentalCoach {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageMental img {
+    filter: drop-shadow(0px 0px 3rem #ffd200);
+    width: 25rem;
+  }
+  .titleMental h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.5rem;
+  }
+  .titleMental p,
+  .subtitleMental p {
+    width: 20rem;
+  }
+  .subtitle h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* SERVIÇOS */
+
+.servicos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40rem;
+  background: url('../image/faixaAmarela.png') center;
+
+  margin: 0 auto;
+  z-index: 0;
+  margin-top: -15rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.title h2 {
+  font-weight: 200;
+}
+
+.pacotes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  color: #000;
+  line-height: 33px;
+}
+
+.pacotes h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.individual,
+.grupo,
+.palestra {
+  font-size: 2rem;
+  text-transform: uppercase;
+  width: 10rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .individual,
+  .grupo,
+  .palestra {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    /* width: 10rem; */
+    font-weight: 300;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 425px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .pacotes {
+    display: flex;
+
+    font-weight: 200;
+  }
+  .individual,
+  .grupo,
+  .palestra {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    width: 5rem;
+  }
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -7rem;
+}
+
+.titleDepoimento h2 {
+  background-color: #ffd200;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.8rem 1.3rem;
+  color: #000;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+.atletas {
+  display: flex;
+  gap: 10rem;
+}
+
+.atleta1,
+.atleta2,
+.atleta3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.atleta1 h4,
+.atleta2 h4,
+.atleta3 h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd200;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #000;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+.atleta1 p,
+.atleta2 p,
+.atleta3 p {
+  color: rgba(255, 255, 255, 0.8);
+  width: 20rem;
+  height: 25rem;
+  font-size: 1.3rem;
+  font-family: 'Montserrat';
+  margin-top: 2rem;
+}
+
+.imgAtletas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0px 1px 12px #ffd200);
+  width: 20rem;
+}
+
+@media (max-width: 768px) {
+  .depoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    margin-bottom: 0;
+  }
+  .titleDepoimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .atletas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .depoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    margin-bottom: 0;
+  }
+  .titleDepoimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .titleDepoimento h2 {
+    font-size: 2.5rem;
+  }
+  .atletas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .atleta1 h4,
+  .atleta2 h4,
+  .atleta3 h4 {
+    font-size: 1.5rem;
+  }
+  .imgAtletas{
+    width: 15rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .titleDepoimento h2 {
+    font-size: 3rem;
+  }
+}
+
+/* CONTATO */
+
+.contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.titleContato {
+  margin-bottom: 2rem;
+}
+
+.titleContato h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffd200;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-family: 'Montserrat';
+}
+
+.linksContato h4 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  margin: 0;
+  transition: 0.3s all;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+}
+
+.linksContato h4:hover {
+  color: #ffd200;
+}
+
+a {
+  text-decoration: none;
+}
+.email,
+.instagram,
+.youtube {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.email img,
+.instagram img,
+.youtube img {
+  width: 2rem;
+}
+.botaoContato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  background-color: #ffd200;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border: 1px solid #000;
+}
+
+.botaoContato img {
+  width: 2rem;
+}
+
+.botaoContato:hover {
+  scale: 1.1;
+}
+
+.imagemContato {
+  margin-top: 10rem;
+}
+
+.imagem img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 0px 150px #ffd200);
+  width: 35rem;
+}
+
+@media (max-width: 768px) {
+  .contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .contato {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagem img {
+    filter: drop-shadow(0px 0px 25px #ffd200);
+    width: 23rem;
+  }
+
+  .titleContato h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  .email,
+  .instagram,
+  .youtube {
+    font-size: 1.3rem;
+  }
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10rem;
+  background-color: #ffd200;
+  margin-top: -10rem;
+  z-index: 20;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.footer h2 {
+  display: flex;
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.footer h4 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+@media (max-width: 425px) {
+  .footer h2 {
+    font-size: 2rem;
+  }
+  .footer h4 {
+    font-size: 1rem;
+  }
+}
+
+/* carrosel */
+
+#glide.js {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+
+.titleSlider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  background-color: #ffd200;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1rem 1.3rem;
+  color: #000;
+  font-weight: 200;
+  margin-top: 3rem;
+}
+.glide__slide {
+  margin: 0;
+  text-align: center;
+  
+}
+
+
+.glide__slide p {
+  color: #fff;
+}
+
+.glide__slide img {
+  margin-top: 3rem;
+  width: 12rem;
+}
+
+.glide__slides li {
+  filter: drop-shadow(0px 0px 4px #ffd200);
+}
+
+
+@media (max-width: 768px) {
+  .glide__slide img {
+    margin-top: 2rem;
+    width: 10rem;
+    
+  }
+}
+@media (max-width: 425px) {
+  .glide__slide img {
+    margin-top: 2rem;
+    width: 6rem;
+    
+  }
+  .glide__slide p {
+    font-size: .6rem;
+  }
+
+  .titleSlider {
+    width: 20rem;
+    font-size: 1.3rem;
+  }
+}
