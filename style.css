@@ -836,9 +836,7 @@ footer {
 .glide__slides li {
   filter: drop-shadow(0px 0px 4px #ffd200);
 }
-.glide__slides {
-  display: flex;
-}
+
 @media (max-width: 768px) {
   .glide__slide img {
     margin-top: 2rem;
